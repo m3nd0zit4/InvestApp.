@@ -42,8 +42,8 @@ const SignUp = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 <InputField
                     name="fullName"
-                    label="Full Name"
-                    placeholder="John Doe"
+                    label="Nombre completo"
+                    placeholder="Julian Mendoza"
                     register={register}
                     error={errors.fullName}
                     validation={{ required: 'Full name is required', minLength: 2 }}
@@ -52,7 +52,7 @@ const SignUp = () => {
                 <InputField
                     name="email"
                     label="Email"
-                    placeholder="contact@jsmastery.com"
+                    placeholder="contact@test.com"
                     register={register}
                     error={errors.email}
                     validation={{ required: 'Email name is required', pattern: /^\w+@\w+\.\w+$/, message: 'Email address is required' }}
@@ -61,7 +61,7 @@ const SignUp = () => {
                 <InputField
                     name="password"
                     label="Password"
-                    placeholder="Enter a strong password"
+                    placeholder="Ingresa una contraseña segura"
                     type="password"
                     register={register}
                     error={errors.password}
@@ -70,7 +70,7 @@ const SignUp = () => {
 
                 <CountrySelectField
                     name="country"
-                    label="Country"
+                    label="País"
                     control={control}
                     error={errors.country}
                     required
@@ -78,8 +78,8 @@ const SignUp = () => {
 
                 <SelectField
                     name="investmentGoals"
-                    label="Investment Goals"
-                    placeholder="Select your investment goal"
+                    label="Metas de Inversión"
+                    placeholder="Selecciona tus metas"
                     options={INVESTMENT_GOALS}
                     control={control}
                     error={errors.investmentGoals}
@@ -88,8 +88,8 @@ const SignUp = () => {
 
                 <SelectField
                     name="riskTolerance"
-                    label="Risk Tolerance"
-                    placeholder="Select your risk level"
+                    label="Nivel de Riesgo"
+                    placeholder="Selecciona tu nivel de riesgo"
                     options={RISK_TOLERANCE_OPTIONS}
                     control={control}
                     error={errors.riskTolerance}
@@ -98,8 +98,8 @@ const SignUp = () => {
 
                 <SelectField
                     name="preferredIndustry"
-                    label="Preferred Industry"
-                    placeholder="Select your preferred industry"
+                    label="Industria Preferida"
+                    placeholder="Selecciona tu industria preferida"
                     options={PREFERRED_INDUSTRIES}
                     control={control}
                     error={errors.preferredIndustry}
@@ -107,10 +107,10 @@ const SignUp = () => {
                 />
 
                 <Button type="submit" disabled={isSubmitting} className="yellow-btn w-full mt-5">
-                    {isSubmitting ? 'Creating Account' : 'Start Your Investing Journey'}
+                    {isSubmitting ? 'Crear una cuenta' : 'Enpieza ahora con este viaje'}
                 </Button>
 
-                <FooterLink text="Already have an account?" linkText="Sign in" href="/sign-in" />
+                <FooterLink text="¿Ya tienes una cuenta?" linkText="Sign in" href="/sign-in" />
             </form>
         </>
     )
