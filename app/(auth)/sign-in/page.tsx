@@ -34,7 +34,7 @@ const SignIn = () => {
                 <InputField
                     name="email"
                     label="Email"
-                    placeholder="contact@jsmastery.com"
+                    placeholder="contact@test.com"
                     register={register}
                     error={errors.email}
                     validation={{ required: 'Email is required', pattern: /^\w+@\w+\.\w+$/ }}
@@ -43,7 +43,7 @@ const SignIn = () => {
                 <InputField
                     name="password"
                     label="Password"
-                    placeholder="Enter your password"
+                    placeholder="Ingresa la conseña de tu cuenta"
                     type="password"
                     register={register}
                     error={errors.password}
@@ -54,7 +54,7 @@ const SignIn = () => {
                     {isSubmitting ? 'Signing In' : 'Sign In'}
                 </Button>
 
-                <FooterLink text="Don't have an account?" linkText="Create an account" href="/sign-up" />
+                <FooterLink text="¿No tienes una cuenta?" linkText="Create an account" href="/sign-up" />
             </form>
         </>
     );
